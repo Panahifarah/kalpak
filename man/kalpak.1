@@ -1,0 +1,47 @@
+.\" Manpage for kalpak
+.\" Contact <Panahifar.ah@outlook.com> at <your_website> for support
+.TH KALPAK 1 "August 2024" "1.0.0" "Kalpak User Manual"
+.SH NAME
+kalpak \- Download content from URLs [HTTP, HTTPS]
+.SH SYNOPSIS
+.B kalpak
+[\fIoptions\fR]
+.SH DESCRIPTION
+.B kalpak
+is a tool to download content from a list of URLs.
+.SH OPTIONS
+.TP
+.BI -f ", --file " FILENAME
+Input JSON file with URLs.
+.TP
+.BI -d ", --dest " DIRECTORY
+Output directory for downloaded content (default is current directory).
+.TP
+.BI -l ", --log " FILENAME
+Log file.
+.TP
+.BI -r ", --retries " NUMBER
+Number of retries for failed downloads (default is 3).
+.TP
+.BI -m ", --max-connections " NUMBER
+Maximum number of concurrent connections (default is 10).
+.TP
+.BI -c ", --config " FILENAME
+Configuration file (YAML format).
+.TP
+.BI -u ", --url " URL [URL ...]
+Inline URLs to download.
+.TP
+.BI -v ", --version"
+Show version information.
+.TP
+.BI --resume
+Resume download from where it left off.
+.SH EXAMPLES
+.TP
+.B kalpak -u http://example.com/file1.txt http://example.com/file2.txt -d ~/downloads
+Download files from the specified URLs and save them to ~/downloads.
+.SH AUTHOR
+Written by Amir Husayn Panahifar <Panahifar.ah@outlook.com>.
+.SH REPORTING BUGS
+Report bugs to <Panahifar.ah@outlook.com>.
